@@ -208,9 +208,9 @@ public class KoalaPage {
     public WebElement cikisTarih;
 
 
-//SENGUL HANIM
-@FindBy( id = "UserName")
-public WebElement userNameKutusu4;
+    //SENGUL HANIM
+    @FindBy( id = "UserName")
+    public WebElement userNameKutusu4;
     @FindBy ( id = "Password" )
     public WebElement passwordKutusu4;
     @FindBy ( xpath = "//button[.='Log in']")
@@ -221,6 +221,28 @@ public WebElement userNameKutusu4;
     public WebElement userNameBlankMessage;
     @FindBy (xpath = "//span[@for='Password']")
     public WebElement passwordBlankMessage;
+
+    //Umut bey
+    @FindBy ( id = "UserName")
+    public WebElement loginUserNameKutusu;
+    @FindBy ( id = "Password" )
+    public WebElement loginPasswordKutusu;
+    @FindBy ( id = "btnSubmit" )
+    public WebElement hesapLoginButonu;
+    @FindBy ( id = "menuHotels" )
+    public WebElement hotelManagmentSekmesi;
+    @FindBy (  partialLinkText = "Hotel List")
+    public WebElement hotelListSekmesi;
+    @FindBy ( xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement HotelListYazisi;
+    @FindBy (  partialLinkText = "Hotel Rooms")
+    public WebElement hotelRoomSekmesi;
+    @FindBy ( xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement HotelRoomsYazisi;
+    @FindBy ( partialLinkText = "Room reservation")
+    public WebElement hotelReservationsSekmesi;
+    @FindBy ( xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement HotelReservationsYazisi;
 
 }
 

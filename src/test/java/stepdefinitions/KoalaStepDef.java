@@ -333,7 +333,7 @@ public class KoalaStepDef {
     @Given("kullanici hotelcreate save butonuna tiklar")
     public void kullanici_hotelcreate_save_butonuna_tiklar() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -661,6 +661,56 @@ public void kullanici_login_sayfasinda_deneme_yapar() {
     public void kullanici_password_is_required_mesajini_gorur() {
         Assert.assertTrue(page.passwordBlankMessage.isDisplayed());
     }
+
+    //Umut bey=============================================================
+    @Given("kullanici  {string} sayfasina gider")
+    public void kullanici_sayfasina_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin");
+    }
+    @Given("kullanici username bolumune {string} girer")
+    public void kullanici_username_bolumune_girer(String string) {
+        page.loginUserNameKutusu.sendKeys(string);
+    }
+    @Given("kullanici password bolumune {string} girer")
+    public void kullanici_password_bolumune_girer(String string) {
+        page.loginPasswordKutusu.sendKeys(string);
+    }
+    @Then("kullanici login butonuna basar ve admin sayfasina ulasir")
+    public void kullanici_login_butonuna_basar_ve_admin_sayfasina_ulasir() {
+        page.hesapLoginButonu.click();
+    }
+    @Then("kullanici Hotel Manangment sekmesine tiklar")
+    public void kullanici_Hotel_Manangment_sekmesine_tiklar() {
+        page.hotelManagmentSekmesi.click();
+    }
+    @Given("kullanici Hotel List butonuna tiklar")
+    public void kullanici_Hotel_List_butonuna_tiklar() {
+        page.hotelListSekmesi.click();
+    }
+    @Given("kullanici LIST OF HOTELS yazisini goruntuler")
+    public void kullanici_LIST_OF_HOTELS_yazisini_goruntuler() {
+        System.out.println(page.HotelListYazisi.getText());
+        Assert.assertTrue(page.HotelListYazisi.isEnabled());
+    }
+    @Given("kullanici Hotel Rooms butonuna tiklar")
+    public void kullanici_Hotel_Rooms_butonuna_tiklar() {
+        page.hotelRoomSekmesi.click();
+    }
+    @Given("kullanici LIST OF ROOMS yazisini goruntuler")
+    public void kullanici_LIST_OF_ROOMS_yazisini_goruntuler() {
+        System.out.println(page.HotelRoomsYazisi.getText());
+        Assert.assertTrue(page.HotelRoomsYazisi.isEnabled());
+    }
+    @Given("kullanici Room reservations butonuna tiklar")
+    public void kullanici_Room_reservations_butonuna_tiklar() {
+        page.hotelReservationsSekmesi.click();
+    }
+    @Given("kullanici LIST OF RESERVATIONS yazisini goruntuler")
+    public void kullanici_LIST_OF_RESERVATIONS_yazisini_goruntuler() {
+        System.out.println(page.HotelReservationsYazisi.getText());
+        Assert.assertTrue(page.HotelReservationsYazisi.isEnabled());
+    }
+
 
 
 }

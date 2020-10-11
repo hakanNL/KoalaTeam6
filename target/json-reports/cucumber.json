@@ -1,0 +1,422 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 14068793200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 435657000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32087534200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T22:53:40.490Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1022100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 774,
+        "name": "TC06_Koalapalace Hotel List goruntuleme",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc06-koalapalace-hotel-list-goruntuleme",
+        "after": [
+          {
+            "result": {
+              "duration": 1341917100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 137393100,
+              "status": "passed"
+            },
+            "line": 775,
+            "name": "kullanici Hotel Manangment sekmesine tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Hotel_Manangment_sekmesine_tiklar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1020405200,
+              "status": "passed"
+            },
+            "line": 776,
+            "name": "kullanici Hotel List butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Hotel_List_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73801100,
+              "status": "passed"
+            },
+            "line": 777,
+            "name": "kullanici LIST OF HOTELS yazisini goruntuler",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_LIST_OF_HOTELS_yazisini_goruntuler()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@umutbey"
+          },
+          {
+            "name": "@hotelmanagement"
+          },
+          {
+            "name": "@testcase_01"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9644038300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 479329200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18462895200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T22:54:29.816Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 779,
+        "name": "TC06_Koalapalace Hotel Rooms goruntuleme",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc06-koalapalace-hotel-rooms-goruntuleme",
+        "after": [
+          {
+            "result": {
+              "duration": 1090035900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 197066800,
+              "status": "passed"
+            },
+            "line": 780,
+            "name": "kullanici Hotel Manangment sekmesine tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Hotel_Manangment_sekmesine_tiklar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1235089100,
+              "status": "passed"
+            },
+            "line": 781,
+            "name": "kullanici Hotel Rooms butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Hotel_Rooms_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47945500,
+              "status": "passed"
+            },
+            "line": 782,
+            "name": "kullanici LIST OF ROOMS yazisini goruntuler",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_LIST_OF_ROOMS_yazisini_goruntuler()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@umutbey"
+          },
+          {
+            "name": "@hotelmanagement"
+          },
+          {
+            "name": "@testcase_02"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8695302100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 489125200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21977536000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T22:55:01.029Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 784,
+        "name": "TC06_Koalapalace Hotel Rooms goruntuleme",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc06-koalapalace-hotel-rooms-goruntuleme",
+        "after": [
+          {
+            "result": {
+              "duration": 1032036500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 211435700,
+              "status": "passed"
+            },
+            "line": 785,
+            "name": "kullanici Hotel Manangment sekmesine tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Hotel_Manangment_sekmesine_tiklar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1327122900,
+              "status": "passed"
+            },
+            "line": 786,
+            "name": "kullanici Room reservations butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_Room_reservations_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 116181500,
+              "status": "passed"
+            },
+            "line": 787,
+            "name": "kullanici LIST OF RESERVATIONS yazisini goruntuler",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_LIST_OF_RESERVATIONS_yazisini_goruntuler()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@umutbey"
+          },
+          {
+            "name": "@hotelmanagement"
+          },
+          {
+            "name": "@testcase_03"
+          }
+        ]
+      }
+    ],
+    "name": "KoalaPalace Hotel Room Reservation Creation",
+    "description": "",
+    "id": "koalapalace-hotel-room-reservation-creation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/koalapalace.feature",
+    "tags": [
+      {
+        "name": "@team6",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

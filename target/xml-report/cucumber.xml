@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="114.715">
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel List goruntuleme" time="49.26">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici Hotel Manangment sekmesine tiklar...........................passed
+And kullanici Hotel List butonuna tiklar....................................passed
+Then kullanici LIST OF HOTELS yazisini goruntuler...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme" time="31.16">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici Hotel Manangment sekmesine tiklar...........................passed
+And kullanici Hotel Rooms butonuna tiklar...................................passed
+Then kullanici LIST OF ROOMS yazisini goruntuler............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme 2" time="33.856">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici Hotel Manangment sekmesine tiklar...........................passed
+And kullanici Room reservations butonuna tiklar.............................passed
+Then kullanici LIST OF RESERVATIONS yazisini goruntuler.....................passed
+]]></system-out>
+    </testcase>
+</testsuite>

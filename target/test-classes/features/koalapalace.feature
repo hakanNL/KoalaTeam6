@@ -130,8 +130,8 @@ Feature: KoalaPalace Hotel Room Reservation Creation
     And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer
     And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer
     And kullanici room reservation Price bolumune "300" girer
-    And kullanici room reservation DateStart bolumune "23?11;2021" girer
-    And kullanici room reservation DateEnd bolumune "24*11'2021" girer
+    And kullanici room reservation DateStart bolumune "11?23;2021" girer
+    And kullanici room reservation DateEnd bolumune "11*23'2021" girer
     And kullanici room reservation AdultAmount bolumune "2" girer
     And kullanici room reservation ChildrenAmount bolumune "2" girer
     And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer
@@ -769,5 +769,22 @@ Feature: KoalaPalace Hotel Room Reservation Creation
     And kullanici login butonuna tiklar
     Then kullanici username is required mesajini gorur
     Then kullanici password is required mesajini gorur
+
+  @umutbey  @hotelmanagement @testcase_01
+  Scenario: TC06_Koalapalace Hotel List goruntuleme
+    Given kullanici Hotel Manangment sekmesine tiklar
+    And kullanici Hotel List butonuna tiklar
+    Then kullanici LIST OF HOTELS yazisini goruntuler
+  @umutbey @hotelmanagement  @testcase_02
+  Scenario: TC06_Koalapalace Hotel Rooms goruntuleme
+    Given kullanici Hotel Manangment sekmesine tiklar
+    And kullanici Hotel Rooms butonuna tiklar
+    Then kullanici LIST OF ROOMS yazisini goruntuler
+  @umutbey @hotelmanagement  @testcase_03
+  Scenario: TC06_Koalapalace Hotel Rooms goruntuleme
+    Given kullanici Hotel Manangment sekmesine tiklar
+    And kullanici Room reservations butonuna tiklar
+    Then kullanici LIST OF RESERVATIONS yazisini goruntuler
+
 
 
