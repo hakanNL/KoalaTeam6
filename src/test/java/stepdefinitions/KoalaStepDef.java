@@ -20,7 +20,8 @@ public class KoalaStepDef {
     }
 
     @Given("kullanici kullaniciadi ve sifresini girer")
-    public void kullanici_kullaniciadi_ve_sifresini_girer() {
+    public void kullanici_kullaniciadi_ve_sifresini_girer() throws InterruptedException {
+        Thread.sleep(2000);
         page.userNameKutusu.sendKeys("manager2");
         page.passwordKutusu.sendKeys("Man1ager2!");
     }
@@ -191,7 +192,7 @@ public class KoalaStepDef {
     @Then("And kullanici roomreservation basarili yazisi elde etmemeli.")
     public void and_kullanici_roomreservation_basarili_yazisi_elde_etmemeli() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -419,6 +420,7 @@ public class KoalaStepDef {
             e.printStackTrace();
         }
         System.out.println(page.hotelRoomReservationCreateBasariliYazisi.getText());
+        Assert.assertTrue(page.hotelRoomReservationCreateBasariliYazisi.isDisplayed());
     }
 
 

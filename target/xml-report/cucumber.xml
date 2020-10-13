@@ -1,6 +1,1064 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="114.715">
-    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel List goruntuleme" time="49.26">
+<testsuite errors="0" failures="10" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="51" time="1,821.174">
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC11_Koala Palace Giris islemi yapilir" time="143.103">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici Welcome To Koalapalace yazisini gorur.........................passed
+And kullanici logine clik yapar.............................................passed
+And kullanici kullaniciadi ve sifresini girer ve entere basar...............passed
+Then kullanici LISTOFUSER yazisini gorur....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici valid datestart ve dateend verileriyle room reservation olusturur" time="60.284">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "11/11/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "11/12/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici basarili yazisini assert eder............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC02_kullanici valid artik yil verileri girerek room reservation olusturur" time="44.56">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "02/29/2024" girer........passed
+And kullanici room reservation DateEnd bolumune "02/29/2028" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici basarilidir yazisini assert eder.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC03_kullanici datestart bolumune dateendden ileri bir tarih girerek room reservation olusturur" time="70.704">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "12/30/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "01/30/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici basarili yazisini ekranda gormemeli......................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaStepDef.and_kullanici_basarili_yazisini_ekranda_gormemeli(KoalaStepDef.java:148)
+	at ✽.And kullanici basarili yazisini ekranda gormemeli.(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:68)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC04_kullanici datestart bolumunu bos birakip, dateende valid veri girerek room reservation olusturur" time="58.458">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "" girer..................passed
+And kullanici room reservation DateEnd bolumune "11/22/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici hatamesaji almali........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC05_kullanici dateend bolumunu bos birakip, datestarta valid veri girerek room reservation olusturur" time="84.692">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "11/22/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "" girer....................passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici DateEnd kisminda hatamesaji almali.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_kullanici datestart ve dateend bolumunu bos birakip room reservation olusturur" time="23.776">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "" girer..................passed
+And kullanici room reservation DateEnd bolumune "" girer....................passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici DateStart ve DateEnd kisminda hatamesaji almali..........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC07_kullanici datestart ve dateend bolumune girisi &quot;gun/ay/yil&quot; seklinde olusturur" time="27.146">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "23/11/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "24/11/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici DateStart ve DateEndde hatamesaji almali ve basarili yazisi elde edilmemeli..failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaStepDef.and_kullanici_DateStart_ve_DateEndde_hatamesaji_almali_ve_basarili_yazisi_elde_edilmemeli(KoalaStepDef.java:187)
+	at ✽.And kullanici DateStart ve DateEndde hatamesaji almali ve basarili yazisi elde edilmemeli.(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:136)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC08_kullanici datestart ve dateend bolumune ayirac olarak harf,ters slash ve slah harici ifadeler girer" time="32.064">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "11?23;2021" girer........passed
+And kullanici room reservation DateEnd bolumune "11*23'2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici roomreservation basarili yazisi elde etmemeli............failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaStepDef.and_kullanici_roomreservation_basarili_yazisi_elde_etmemeli(KoalaStepDef.java:199)
+	at ✽.And kullanici roomreservation basarili yazisi elde etmemeli.(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:153)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC09_kullanici Dates kisminin ay bolumlerine 12'den buyuk ifadeler girer" time="29.348">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "13/11/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "14/11/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then kullanici roomreservation basarilimi, basarili degilmi assert eder.....failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaStepDef.kullanici_roomreservation_basarilimi_basarili_degilmi_assert_eder(KoalaStepDef.java:211)
+	at ✽.kullanici roomreservation basarilimi, basarili degilmi assert eder(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:170)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC010_kullanici Dates kisminin gun bolumlerine o ayin gunlerinden buyuk ifadeler girer" time="26.871">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "10/34/2021" girer........passed
+And kullanici room reservation DateEnd bolumune "10/35/2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then kullanici roomreservationin basarili olup olmadigini assert eder.......failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaStepDef.kullanici_roomreservationin_basarili_olup_olmadigini_assert_eder(KoalaStepDef.java:223)
+	at ✽.kullanici roomreservationin basarili olup olmadigini assert eder(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:187)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC011_kullanici Dates kisimlarina gecmise donuk bilgiler girer" time="27.819">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "12/12/2000" girer........passed
+And kullanici room reservation DateEnd bolumune "12/13/2000" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then kullanicim Dates bolumlerinde hatamesajlari alir.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC012_kullanici datestart ve dateend bolumune ayirac olarak harf ve ters slash ifadeleri girer" time="41.707">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#UserName&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57567}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: b00a7448da4fc334eaeea65d147c119a&#10;*** Element info: {Using=id, value=UserName}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation IDUser1 bolumunde dropdowndan "manager2" secer.passed
+And kullanici room reservation IDUser2 bolumunde dropdowndan "Hilton" secer.passed
+And kullanici room reservation Price bolumune "300" girer...................passed
+And kullanici room reservation DateStart bolumune "12\11\2021" girer........passed
+And kullanici room reservation DateEnd bolumune "24a11A2021" girer..........passed
+And kullanici room reservation AdultAmount bolumune "2" girer...............passed
+And kullanici room reservation ChildrenAmount bolumune "2" girer............passed
+And kullanici room reservation ContactNameSurname bolumune "Onur Sniper" girer.passed
+And kullanici room reservation ContactPhone bolumune "05452345623" girer....passed
+And kullanici room reservation ContactEmail bolumune "onurnis@gmail.com" girer.passed
+And kullanici room reservation Notes bolumune "1 haftalik kusursuz organizasyon gormek istiyorum" ekler.passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then kullanici dates bolumlerinden hata mesajlari almali....................passed
+Given kullanici koalapalace admin sayfasina gider...........................passed
+And kullanici kullaniciadi ve sifresini girer...............................failed
+Then kullanici giris islemini gerceklestirir................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#UserName"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57567}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b00a7448da4fc334eaeea65d147c119a
+*** Element info: {Using=id, value=UserName}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
+	at stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer(KoalaStepDef.java:24)
+	at ✽.kullanici kullaniciadi ve sifresini girer(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:229)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_01 kullanici code bolumunu girmez" time="25.881">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate name bolumune "Hilton" girer......................passed
+And kullanici hotelcreate adress bolumune "Berlin" girer....................passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate email bolumune "hiltonberlin@gmail.com" girer.....passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_02 kullanici name bolumune veri girmez" time="23.61">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "XYZ345" girer......................passed
+And kullanici hotelcreate adress bolumune "Berlin" girer....................passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate email bolumune "hiltonberlin@gmail.com" girer.....passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_03 kullanici address bolumune veri girmez" time="25.914">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "XYZ345" girer......................passed
+And kullanici hotelcreate name bolumune "Hilton" girer......................passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate email bolumune "hiltonberlin@gmail.com" girer.....passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_0 kullanici phone bolumune veri girmez" time="24.204">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "XYZ345" girer......................passed
+And kullanici hotelcreate name bolumune "Hilton" girer......................passed
+And kullanici hotelcreate adress bolumune "Berlin" girer....................passed
+And kullanici hotelcreate email bolumune "hiltonberlin@gmail.com" girer.....passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_05 kullanici e-mail bolumune veri girmez" time="24.323">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "XYZ345" girer......................passed
+And kullanici hotelcreate name bolumune "Hilton" girer......................passed
+And kullanici hotelcreate adress bolumune "Berlin" girer....................passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate idgroup bolumunde "Hotel Type1" secer.............passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC_06 kullanici idgroup dan secim yapmaz" time="23.861">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelcreate sayfasina gider.................................passed
+And kullanici hotelcreate code bolumune "XYZ345" girer......................passed
+And kullanici hotelcreate name bolumune "Hilton" girer......................passed
+And kullanici hotelcreate adress bolumune "Berlin" girer....................passed
+And kullanici hotelcreate phone bolumune "0539123456" girer.................passed
+And kullanici hotelcreate email bolumune "hiltonberlin@gmail.com" girer.....passed
+And kullanici hotelcreate save butonuna tiklar..............................passed
+Then kullanici hotelcreate kayit islemini assert eder.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC11_kullanici bilgileri girerek room reservation olusturur" time="37.139">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.bootbox\-body&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57764}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 48c11622dcda0c430b89336191a7f632&#10;*** Element info: {Using=class name, value=bootbox-body}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici hotelroomreservation sayfasina gider........................passed
+And kullanici roomreservation iduser bolumunde "manager2" secer.............passed
+And kullanici roomreservation idhotelroom bolumunde "Hilton" secer..........passed
+And kullanici roomreservation price bolumune "500" girer....................passed
+And kullanici roomreservation datestart bolumune "10/10/2020" girer.........passed
+And kullanici roomreservation dateend bolumune "10/17/2020" girer...........passed
+And kullanici roomreservation adultamaount bolumune "2" girer...............passed
+And kullanici roomreservation childrenamount bolumune "3" girer.............passed
+And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer.....passed
+And kullanici roomreservation phone bolumune "0500600700" girer.............passed
+And kullanici roomreservation email bolumune "hamza@gmail.com" girer........passed
+And kullanici roomreservation notes bolumune "Testerlardan selam.." girer...passed
+And kullanici roomreservation save butonuna tiklar..........................passed
+Then kullanici roomreservation kayit islemini assert eder...................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".bootbox\-body"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57764}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 48c11622dcda0c430b89336191a7f632
+*** Element info: {Using=class name, value=bootbox-body}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.KoalaStepDef.kullanici_roomreservation_kayit_islemini_assert_eder(KoalaStepDef.java:421)
+	at ✽.kullanici roomreservation kayit islemini assert eder(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:321)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur" time="29.217">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 2" time="27.379">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 3" time="27.204">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 4" time="13.329">
+        <failure message="element click intercepted: Element &lt;input id=&quot;btnSubmit&quot; type=&quot;submit&quot; value=&quot;Log in&quot; class=&quot;btn btn-primary py-3 px-5&quot;&gt; is not clickable at point (148, 608). Other element would receive the click: &lt;div id=&quot;ftco-loader&quot; class=&quot;fullscreen&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=85.0.4183.121)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: e72e3bff6777e78013cbc7bcba611ae2" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................failed
+Given team06_kullanici hotelroomcreate sayfasina gider......................skipped
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........skipped
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............skipped
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......skipped
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.skipped
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............skipped
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......skipped
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............skipped
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........skipped
+And team06_kullanici hotelroomcreate save butonuna tiklar...................skipped
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="btnSubmit" type="submit" value="Log in" class="btn btn-primary py-3 px-5"> is not clickable at point (148, 608). Other element would receive the click: <div id="ftco-loader" class="fullscreen">...</div>
+  (Session info: chrome=85.0.4183.121)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e72e3bff6777e78013cbc7bcba611ae2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir(KoalaStepDef.java:35)
+	at ✽.kullanici giris islemini gerceklestirir(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 5" time="16.444">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 6" time="26.246">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 7" time="24.521">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 8" time="27.231">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 9" time="25.024">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "2023 2023" girer........passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 10" time="34.088">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.bootbox\-body&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: fe4a5d77a3548cfa3fc9c69b0be1d8d8&#10;*** Element info: {Using=class name, value=bootbox-body}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "786" girer..........passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".bootbox\-body"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58010}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fe4a5d77a3548cfa3fc9c69b0be1d8d8
+*** Element info: {Using=class name, value=bootbox-body}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.KoalaStepDef.team06_kullanici_uyari_mesaji_aldigini_assert_eder(KoalaStepDef.java:511)
+	at ✽.team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:482)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC08_team06_kullanici bilgleri eksik girerek hotel room olusturur" time="24.15">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat "Pahali" girer....passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur" time="26.862">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "HS" girer...........passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "3" girer.........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_team06_kullanici bilgleri eksik girerek hotel room olusturur 2" time="34.557">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.bootbox\-body&quot;}&#10;  (Session info: chrome=85.0.4183.121)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: db1a1df6b798a392f8bdc510f6e598d3&#10;*** Element info: {Using=class name, value=bootbox-body}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given team06_kullanici hotelroomcreate sayfasina gider......................passed
+And team06_kullanici hotelroomcreate idhotel bolumunde "Star" secer.........passed
+And team06_kullanici hotelroomcreate code bolumune "4900" girer.............passed
+And team06_kullanici hotelroomcreate name bolumune "Boni Garcia" girer......passed
+And team06_kullanici hotelroomcreate location bolumune "Langenthal" girer...passed
+And team06_kullanici hotelroomcreate description bolumune "Ah Techproed Ah!" girer.passed
+And team06_kullanici hotelroomcreate price bolumune fiyat girer.............passed
+And team06_kullanici hotelroomcreate roomtype bolumunde "Double" secer......passed
+And team06_kullanici hotelroomcreate maxadult bolumune "2" girer............passed
+And team06_kullanici hotelroomcreate maxchildren bolumune "HS" girer........passed
+And team06_kullanici hotelroomcreate save butonuna tiklar...................passed
+Then team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder.failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".bootbox\-body"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-7BM0IB0', ip: '192.168.1.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\onurn\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: db1a1df6b798a392f8bdc510f6e598d3
+*** Element info: {Using=class name, value=bootbox-body}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at stepdefinitions.KoalaStepDef.team06_kullanici_uyari_mesaji_aldigini_assert_eder(KoalaStepDef.java:511)
+	at ✽.team06_kullanici "Fill All Fields Please" uyari mesaji aldigini assert eder(file:///C:/Users/onurn/IdeaProjects/KoalaTeam6/src/test/resources/features/koalapalace.feature:527)
+]]></failure>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici IdUser-1 kismini secmez" time="43.043">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC02_kullanici IdUser-2 kismini secmez" time="45.297">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC03_kullanici Price kismini secmez" time="40.535">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC04_kullanici AdultAmont kismini secmez" time="48.414">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC05_kullanici ChildAmont kismini secmez" time="46.296">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_kullanici ContactName kismini secmez" time="40.515">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC07_kullanici ContactPhone kismi secmez" time="35.721">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC08_kullanici Notes kismi secmez" time="44.661">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC09_kullanici Notes kismi secmez" time="46.271">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC10_kullanici Aproved kismi secmez" time="43.171">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC11_kullanici Is kismi secmez" time="41.642">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+And kullanici addroom kismina click yapar...................................passed
+And kullanici birinci IDUser kismini dropdown ile secer.....................passed
+And kullanici ikinci IDUser kismini dropdown ile secer......................passed
+And kullanici price kismini secer ve value yollar...........................passed
+And kullanici giris tarihini secer ve yazar.................................passed
+And kullanici cikis tarihini secer ve girer.................................passed
+And kullanici AdultAmont kismini secer ve value gonderir....................passed
+And kullanici ChildAmont kismini secer ve value gonderir....................passed
+And kullanici ContactNameSurname kismini secer ve value gonderir............passed
+And kullanici ContactPhone kismini secer ve value gonderir..................passed
+And kullanici Contact Email kismini secer ve value gonderir.................passed
+And kullanici Notes kismini secev ve value gonderir.........................passed
+And kullanici Aproved kismini click yapar...................................passed
+And kullanici IsPaid kismini click yapar....................................passed
+And kullanici Save butonuna click yapar.....................................passed
+Then kullanici accept sonucunu ekranda gormemeli............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username yanlis giris yapar" time="20.736">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager" girer...........passed
+And kullanici login sayfasinda password bolumunde "Man1ager2!" girer........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici password yanlis giris yapar" time="19.689">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager2" girer..........passed
+And kullanici login sayfasinda password bolumunde "Man1ager!" girer.........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username ve password yanlis giris yapar" time="21.211">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager" girer...........passed
+And kullanici login sayfasinda password bolumunde "Man1ager!" girer.........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username ve password bos giris yapar" time="20.614">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici username is required mesajini gorur..........................passed
+Then kullanici password is required mesajini gorur..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel List goruntuleme" time="23.481">
         <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
@@ -9,7 +1067,7 @@ And kullanici Hotel List butonuna tiklar....................................pass
 Then kullanici LIST OF HOTELS yazisini goruntuler...........................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme" time="31.16">
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme" time="19.623">
         <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
@@ -18,7 +1076,7 @@ And kullanici Hotel Rooms butonuna tiklar...................................pass
 Then kullanici LIST OF ROOMS yazisini goruntuler............................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme 2" time="33.856">
+    <testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC06_Koalapalace Hotel Rooms goruntuleme 2" time="27.077">
         <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
