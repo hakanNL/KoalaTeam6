@@ -660,6 +660,8 @@ public void kullanici_login_sayfasinda_deneme_yapar() {
     @Then("kullanici password is required mesajini gorur")
     public void kullanici_password_is_required_mesajini_gorur() {
         Assert.assertTrue(page.passwordBlankMessage.isDisplayed());
+
+        System.out.println("Team-6 branch olusturma emre ");
     }
 
 

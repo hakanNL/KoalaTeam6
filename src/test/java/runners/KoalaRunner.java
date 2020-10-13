@@ -11,15 +11,15 @@ import org.junit.runner.RunWith;
                    "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
            glue  = "stepdefinitions",
-      //  tags   = "@team6",
+        //tags   = "@team6",
         //tags   = "@onurbey ",//        @roomreservationdates",
         //tags   = "@hakanbey         @koalapalaceLogin",
-        //tags   =  "@aysoltanhanim ", "@hotelcreate",
+        //tags   = "@aysoltanhanim ", "@hotelcreate",
         //tags   = "@meltemhanim,     @hotelreservationcreate
         //tags   = "@Salihbey,        @hotelcreate1",
         //tags   = "@emre,            @roomrezarvasyonu",
-       // tags   = "@sengulhanim" , // @loginpagetest",
-          tags   = "@aysoltanhanim ",
+        //tags   = "@sengulhanim" , // @loginpagetest",
+
         dryRun   =  false
 )
 public class KoalaRunner {
