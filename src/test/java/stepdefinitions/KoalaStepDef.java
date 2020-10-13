@@ -283,6 +283,7 @@ public class KoalaStepDef {
     public void kullanici_LISTOFUSER_yazisini_gorur() {
         System.out.println(page.listofuserYazisi.getText());
         Assert.assertTrue(page.listofuserYazisi.isDisplayed());
+        System.out.println(" Hakan deneme GITHUB branch");
 
     }
 
