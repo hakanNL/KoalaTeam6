@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
         //tags   = "@Salihbey,        @hotelcreate1",
         //tags   = "@emre,            @roomrezarvasyonu",
        // tags   = "@sengulhanim" , // @loginpagetest",
-          tags   = "@aysoltanhanim ",
+          tags   = "@sengulhanim ",
         dryRun   =  false
 )
 public class KoalaRunner {

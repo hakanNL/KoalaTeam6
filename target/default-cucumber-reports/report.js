@@ -45,7 +45,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "TC_01 kullanici code bolumunu girmez",
+  "name": "TC01_kullanici username yanlis giris yapar",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -53,92 +53,62 @@ formatter.scenario({
       "name": "@team6"
     },
     {
-      "name": "@hotelcreate"
+      "name": "@loginpagetest"
     },
     {
-      "name": "@hotelcreatenegativetest1"
+      "name": "@loginpagenegativetest1"
     },
     {
-      "name": "@aysoltanhanim"
+      "name": "@sengulhanim"
     }
   ]
 });
 formatter.step({
-  "name": "kullanici hotelcreate sayfasina gider",
+  "name": "kullanici login sayfasinda deneme yapar",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_sayfasina_gider()"
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelcreate name bolumune \"Hilton\" girer",
+  "name": "kullanici login sayfasinda username bolumunde \"manager\" girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_name_bolumune_girer(java.lang.String)"
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelcreate adress bolumune \"Berlin\" girer",
+  "name": "kullanici login sayfasinda password bolumunde \"Man1ager2!\" girer",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_adress_bolumune_girer(java.lang.String)"
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelcreate phone bolumune \"0539123456\" girer",
+  "name": "kullanici login butonuna tiklar",
   "keyword": "And "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_phone_bolumune_girer(java.lang.String)"
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici hotelcreate email bolumune \"hiltonberlin@gmail.com\" girer",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_email_bolumune_girer(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "kullanici hotelcreate idgroup bolumunde \"Hotel Type1\" secer",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_idgroup_bolumunde_secer(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "kullanici hotelcreate save butonuna tiklar",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_save_butonuna_tiklar()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "kullanici hotelcreate kayit islemini assert eder",
+  "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepdefinitions.KoalaStepDef.kullanici_hotelcreate_kayit_islemini_assert_eder()"
+  "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
 });
 formatter.result({
   "status": "passed"
@@ -174,4 +144,275 @@ formatter.step({
 });
 formatter.match({
   "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC01_kullanici password yanlis giris yapar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@team6"
+    },
+    {
+      "name": "@loginpagetest"
+    },
+    {
+      "name": "@loginpagenegativetest2"
+    },
+    {
+      "name": "@sengulhanim"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici login sayfasinda deneme yapar",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login sayfasinda username bolumunde \"manager2\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login sayfasinda password bolumunde \"Man1ager!\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC01_kullanici username ve password yanlis giris yapar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@team6"
+    },
+    {
+      "name": "@loginpagetest"
+    },
+    {
+      "name": "@loginpagenegativetest3"
+    },
+    {
+      "name": "@sengulhanim"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici login sayfasinda deneme yapar",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login sayfasinda username bolumunde \"manager\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login sayfasinda password bolumunde \"Man1ager!\" girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Koala Palace Admin Giris",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.step({
+  "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici kullaniciadi ve sifresini girer",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici giris islemini gerceklestirir",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "TC01_kullanici username ve password bos giris yapar",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@team6"
+    },
+    {
+      "name": "@loginpagetest"
+    },
+    {
+      "name": "@loginpagenegativetest4"
+    },
+    {
+      "name": "@sengulhanim"
+    }
+  ]
+});
+formatter.step({
+  "name": "kullanici login sayfasinda deneme yapar",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici login butonuna tiklar",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici username is required mesajini gorur",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_username_is_required_mesajini_gorur()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "kullanici password is required mesajini gorur",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.KoalaStepDef.kullanici_password_is_required_mesajini_gorur()"
+});
+formatter.result({
+  "status": "passed"
+});
 });

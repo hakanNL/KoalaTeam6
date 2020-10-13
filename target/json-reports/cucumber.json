@@ -1,0 +1,590 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13580000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 505000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 16218000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-10T22:05:17.691Z",
+        "line": 740,
+        "name": "TC01_kullanici username yanlis giris yapar",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc01-kullanici-username-yanlis-giris-yapar",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 967000000,
+              "status": "passed"
+            },
+            "line": 741,
+            "name": "kullanici login sayfasinda deneme yapar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 261000000,
+              "status": "passed"
+            },
+            "line": 742,
+            "name": "kullanici login sayfasinda username bolumunde \"manager\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"manager\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 208000000,
+              "status": "passed"
+            },
+            "line": 743,
+            "name": "kullanici login sayfasinda password bolumunde \"Man1ager2!\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Man1ager2!\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1053000000,
+              "status": "passed"
+            },
+            "line": 744,
+            "name": "kullanici login butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 120000000,
+              "status": "passed"
+            },
+            "line": 745,
+            "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@loginpagetest"
+          },
+          {
+            "name": "@loginpagenegativetest1"
+          },
+          {
+            "name": "@sengulhanim"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1275000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 265000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6133000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-10T22:05:50.808Z",
+        "line": 749,
+        "name": "TC01_kullanici password yanlis giris yapar",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc01-kullanici-password-yanlis-giris-yapar",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 718000000,
+              "status": "passed"
+            },
+            "line": 750,
+            "name": "kullanici login sayfasinda deneme yapar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 135000000,
+              "status": "passed"
+            },
+            "line": 751,
+            "name": "kullanici login sayfasinda username bolumunde \"manager2\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"manager2\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106000000,
+              "status": "passed"
+            },
+            "line": 752,
+            "name": "kullanici login sayfasinda password bolumunde \"Man1ager!\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Man1ager!\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 680000000,
+              "status": "passed"
+            },
+            "line": 753,
+            "name": "kullanici login butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 100000000,
+              "status": "passed"
+            },
+            "line": 754,
+            "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@loginpagetest"
+          },
+          {
+            "name": "@loginpagenegativetest2"
+          },
+          {
+            "name": "@sengulhanim"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1065000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 242000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5661000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-10T22:06:00.240Z",
+        "line": 758,
+        "name": "TC01_kullanici username ve password yanlis giris yapar",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc01-kullanici-username-ve-password-yanlis-giris-yapar",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 691000000,
+              "status": "passed"
+            },
+            "line": 759,
+            "name": "kullanici login sayfasinda deneme yapar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 104000000,
+              "status": "passed"
+            },
+            "line": 760,
+            "name": "kullanici login sayfasinda username bolumunde \"manager\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"manager\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_username_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 104000000,
+              "status": "passed"
+            },
+            "line": 761,
+            "name": "kullanici login sayfasinda password bolumunde \"Man1ager!\" girer",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Man1ager!\"",
+                  "offset": 46
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_password_bolumunde_girer(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 727000000,
+              "status": "passed"
+            },
+            "line": 762,
+            "name": "kullanici login butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 118000000,
+              "status": "passed"
+            },
+            "line": 763,
+            "name": "kullanici giris isleminin basarisiz oldugunu verify eder",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_isleminin_basarisiz_oldugunu_verify_eder()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@loginpagetest"
+          },
+          {
+            "name": "@loginpagenegativetest3"
+          },
+          {
+            "name": "@sengulhanim"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "Koala Palace Admin Giris",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1064000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici \"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl\u003d%2FAdmin%2FUserAdmin\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.KoalaStepDef.kullanici_sayfasina_gider(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 260000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "kullanici kullaniciadi ve sifresini girer",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_kullaniciadi_ve_sifresini_girer()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5768000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "kullanici giris islemini gerceklestirir",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_giris_islemini_gerceklestirir()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-10T22:06:09.000Z",
+        "line": 767,
+        "name": "TC01_kullanici username ve password bos giris yapar",
+        "description": "",
+        "id": "koalapalace-hotel-room-reservation-creation;tc01-kullanici-username-ve-password-bos-giris-yapar",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 689000000,
+              "status": "passed"
+            },
+            "line": 768,
+            "name": "kullanici login sayfasinda deneme yapar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_sayfasinda_deneme_yapar()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 140000000,
+              "status": "passed"
+            },
+            "line": 769,
+            "name": "kullanici login butonuna tiklar",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_login_butonuna_tiklar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72000000,
+              "status": "passed"
+            },
+            "line": 770,
+            "name": "kullanici username is required mesajini gorur",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_username_is_required_mesajini_gorur()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 771,
+            "name": "kullanici password is required mesajini gorur",
+            "match": {
+              "location": "stepdefinitions.KoalaStepDef.kullanici_password_is_required_mesajini_gorur()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@team6"
+          },
+          {
+            "name": "@loginpagetest"
+          },
+          {
+            "name": "@loginpagenegativetest4"
+          },
+          {
+            "name": "@sengulhanim"
+          }
+        ]
+      }
+    ],
+    "name": "KoalaPalace Hotel Room Reservation Creation",
+    "description": "",
+    "id": "koalapalace-hotel-room-reservation-creation",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/koalapalace.feature",
+    "tags": [
+      {
+        "name": "@team6",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

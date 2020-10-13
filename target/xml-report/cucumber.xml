@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="60.067">
+<testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username yanlis giris yapar" time="33.093">
+<system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager" girer...........passed
+And kullanici login sayfasinda password bolumunde "Man1ager2!" girer........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+</testcase>
+<testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici password yanlis giris yapar" time="9.42">
+<system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager2" girer..........passed
+And kullanici login sayfasinda password bolumunde "Man1ager!" girer.........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+</testcase>
+<testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username ve password yanlis giris yapar" time="8.712">
+<system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login sayfasinda username bolumunde "manager" girer...........passed
+And kullanici login sayfasinda password bolumunde "Man1ager!" girer.........passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici giris isleminin basarisiz oldugunu verify eder...............passed
+]]></system-out>
+</testcase>
+<testcase classname="KoalaPalace Hotel Room Reservation Creation" name="TC01_kullanici username ve password bos giris yapar" time="8.049">
+<system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici login sayfasinda deneme yapar...............................passed
+And kullanici login butonuna tiklar.........................................passed
+Then kullanici username is required mesajini gorur..........................passed
+Then kullanici password is required mesajini gorur..........................passed
+]]></system-out>
+</testcase>
+</testsuite>
