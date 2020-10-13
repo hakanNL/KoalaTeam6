@@ -711,7 +711,10 @@ public void kullanici_login_sayfasinda_deneme_yapar() {
     public void kullanici_LIST_OF_RESERVATIONS_yazisini_goruntuler() {
         System.out.println(page.HotelReservationsYazisi.getText());
         Assert.assertTrue(page.HotelReservationsYazisi.isEnabled());
+
+        System.out.println();
     }
+
 
 
 
