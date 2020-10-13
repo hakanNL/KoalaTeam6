@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                    "junit:target/xml-report/cucumber.xml"},
         features = "src/test/resources/features",
         glue  = "stepdefinitions",
-        //  tags   = "@team6",
+        tags   = "@team6",
         //tags   = "@onurbey ",//        @roomreservationdates",
         //tags   = "@hakanbey         @koalapalaceLogin",
         //tags   =  "@aysoltanhanim ", "@hotelcreate",
@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         //tags   = "@emre,            @roomrezarvasyonu",
         // tags   = "@sengulhanim" , // @loginpagetest",
         // tags   = "@aysoltanhanim ",
-        tags   = "@umutbey" ,        //@hotelmanagement ",
+        //tags   = "@umutbey" ,        //@hotelmanagement ",
         dryRun   =  false
 )
 public class Runner {

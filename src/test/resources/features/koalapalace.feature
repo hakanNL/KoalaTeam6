@@ -4,6 +4,17 @@ Feature: KoalaPalace Hotel Room Reservation Creation
     Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider
     And kullanici kullaniciadi ve sifresini girer
     Then kullanici giris islemini gerceklestirir
+
+     #hakan bey
+  @koalapalaceLogin,@hakanbey
+  #Feature: Koala Palace
+  Scenario: TC11_Koala Palace Giris islemi yapilir
+    Given kullanici koalapalace admin sayfasina gider
+    And kullanici Welcome To Koalapalace yazisini gorur
+    And kullanici logine clik yapar
+    And kullanici kullaniciadi ve sifresini girer ve entere basar
+    Then kullanici LISTOFUSER yazisini gorur
+
   @roomreservationdates
   @roomreservationdatespositive01  @onurbey
   Scenario: TC01_kullanici valid datestart ve dateend verileriyle room reservation olusturur
@@ -210,19 +221,7 @@ Feature: KoalaPalace Hotel Room Reservation Creation
     Then kullanici dates bolumlerinden hata mesajlari almali
 
 
-   #hakan bey
-  @koalapalaceLogin,@hakanbey
-  #Feature: Koala Palace
-  Scenario: TC11_Koala Palace Giris islemi yapilir
-    Given kullanici koalapalace admin sayfasina gider
-    And kullanici Welcome To Koalapalace yazisini gorur
-    And kullanici logine clik yapar
-    And kullanici kullaniciadi ve sifresini girer ve entere basar
-    Then kullanici LISTOFUSER yazisini gorur
-
-
-
-                        #Aysoltan Hanim
+                          #Aysoltan Hanim
                         #Hotel Creat with Invalid Credentials Aysoltan
 #Feature: Koala Palace
 #  Background: Koala Palace Admin Giris
